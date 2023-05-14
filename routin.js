@@ -17,6 +17,26 @@ let classes = [
       { name: "Thursday", sub: [] },
     ],
   },
+  {
+    className: 2,
+    subs: [
+      { name: "ban", weekly: 6 },
+      { name: "religion", weekly: 6 },
+      { name: "science", weekly: 6 },
+      { name: "eng", weekly: 5 },
+      { name: "math", weekly: 6 },
+      { name: "art", weekly: 1 },
+    ],
+    classPerDay: 5,
+    days: [
+      { name: "Satarday", sub: [] },
+      { name: "Sunday", sub: [] },
+      { name: "Monday", sub: [] },
+      { name: "Tuesday", sub: [] },
+      { name: "Wednesday", sub: [] },
+      { name: "Thursday", sub: [] },
+    ],
+  },
 
   //   ...
 ];
