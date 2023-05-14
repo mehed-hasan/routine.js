@@ -2,10 +2,10 @@ let classes = [
   {
     className: 1,
     subs: [
-      { name: "ban", weekly: 7 },
-      { name: "eng", weekly: 4 },
-      { name: "math", weekly: 4 },
-      { name: "art", weekly: 3 },
+      { name: "ban", weekly: 6 },
+      { name: "eng", weekly: 5 },
+      { name: "math", weekly: 6 },
+      { name: "art", weekly: 1 },
     ],
     classPerDay: 3,
     days: [
@@ -28,6 +28,12 @@ classes.forEach((singleClass = element) => {
   //   -------------------------------------------------------
   // ----------------------------------------------------------
   singleClass.days.forEach((singleDay = element) => {
+    // This code is for random sorting array so that always same series do not appear to choose subject
+    // singleClass.subs.sort(() =>
+    //   Math.floor(Math.random() * singleClass.subs.length)
+    // );
+    // This code is for random sorting array so that always same series do not appear to choose subject
+
     response =
       "Setting subject for class " +
       singleClass.className +
@@ -50,6 +56,7 @@ classes.forEach((singleClass = element) => {
         }
       }
     });
+
     console.log(singleDay.sub);
   });
 
