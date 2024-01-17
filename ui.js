@@ -1,5 +1,6 @@
 
 getSavedData();
+generateRoutine();
 
 function addClassRequest (){
     let getClassName = document.querySelector(".className").value;
@@ -179,6 +180,18 @@ function deleteClass(deletingItemName){
     console.log(updatedValue);
 
     getSavedData();
+
+
+}
+
+
+function saveTime(){
+    let start = parseInt(document.querySelector(".startTIme"));
+    let end = parseInt(document.querySelector(".endTime"));
+    let duration = parseInt(document.querySelector(".duration"));
+
+    let total = Math.abs(start - end) ;
+    let maxPeriod = total/duration;
 
 }
 

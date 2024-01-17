@@ -170,20 +170,24 @@ function API(){
 
 console.log(API());
 function generateRoutine(){
+
   let displaySpot = document.querySelector(".routine-section");
   let data = API();
   let dom = data.map((singleClass, index)=>
     `<div class="routine p-4">
   <h6 class="fw-bold text-center">Rutine for class ${singleClass.className}</h6>
-  <table class="table table-hover table-responsive" style="width:100%">
+  <table class="table table-hover table-responsive table-bordered " style="width:100%">
     <tr>
       <th>Days</th>
       <th>7-7:30</th>
-      <th>11-30</th>
-      <th>11-30</th>
-      <th>11-30</th>
-      <th>11-30</th>
-      <th>11-30</th>
+      <th>7:30-8:00</th>
+      <th>9:00-9:30</th>
+      <th>Break</th>
+      <th>10:00-10:30</th>
+      <th>10:30-11:00</th>
+      <th>11:00 - 11:30</th>
+      <th>11:30 - 12:00</th>
+      <th>12:00 - 12:30</th>
     </tr>
     <tr>
       <th>Sat:</th>
@@ -236,4 +240,4 @@ function generateRoutine(){
     displaySpot.innerHTML = dom
 }
 
-generateRoutine();
+
