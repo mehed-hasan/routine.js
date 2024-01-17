@@ -5,8 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
   </head>
   <body>
+    <section class="container-fluid">
+       <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="row flex-column ">
+            <div class="col-12 ">
+              <div class="card p-4 mt-2">
+                <label class="form-label">Class Name: </label>
+                <input class="form-control mb-3 className" type="text" placeholder="Play / One / Two" />
+                <label  class="form-label">Maximum Period Per Day</label>
+                <select class="form-control PeriodNumber">
+                  <option value="1">1</option>
+
+
+
+
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                </select>
+                <button onclick="addClassRequest()" class="w-100 btn-dark mt-2 add-class">+ Add</button>
+              </div>
+            </div>
+            <div class="col-12 ">
+              <div class="card p-4 mt-2">
+                <h5 class="text-center">Classes Info</h4>
+
+                 <div class="classes-info">
+                    
+                 </div>
+                  
+              </div>
+            </div>
+          </div>
+          <button class="w-100 btn-dark mt-2">Generate Routine</button>
+
+        </div>
+        <div class="col-12 col-md-8">
+          <div class="routine-section">
+
+          </div>
+        </div>
+
+
+       </div>
+       
+    </section>
+
+    <section class="modal-section">
+      <!-- Vertically centered modal -->
+        <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Info for Class <span class="classNameOnly"></span></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="subData">
+
+                </div>
+                <hr>
+                  <div class="mb-3">
+                    <div class="row">
+                      <div class="col-6">
+                        <label for="exampleInputEmail1" class="form-label">Subject Name</label>
+                        <input type="text" class="form-control subjectName"  aria-describedby="emailHelp">
+                      </div>
+                      <div class="col-6">
+                        <label for="exampleInputEmail1" class="form-label">Weekly Total Class</label>
+                        <select class="form-control wtc">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <button onclick="addSubRequest()"  class="btn btn-success form-control">+ Add</button>
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div>
+        </div>
+       
+    </section>
+ 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
     <script src="/routin.js" type="text/javascript"></script>
+    <script src="/ui.js" type="text/javascript"></script>
   </body>
 </html>
